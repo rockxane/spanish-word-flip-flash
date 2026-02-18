@@ -36,7 +36,7 @@ pipeline {
                 stage('Integration tests') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.35.0-focal'
+                            image 'mcr.microsoft.com/playwright:v1.58.2-jammy'
                             reuseNode true
                         }
                     }
