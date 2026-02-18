@@ -36,13 +36,13 @@ pipeline {
                 stage('Integration tests') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.58.2-focal'
+                            image 'mcr.microsoft.com/playwright:v1.35.0-focal'
                             reuseNode true
                         }
                     }
                     steps {
                         // E2E tests with Playwright
-                        sh 'npx playwright test'
+                        sh 'npx playwright test --reporter=html'
                     }
                 }
             }
