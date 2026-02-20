@@ -42,7 +42,7 @@ pipeline {
                     }
                     steps {
                         // E2E tests with Playwright
-                        sh 'npx playwright test --reporter=html'
+                        sh 'npx playwright test'
                     }
                 }
             }
@@ -71,7 +71,7 @@ pipeline {
                     }
                     steps {
                         // E2E tests with Playwright
-                        sh 'npx playwright test --reporter=html'
+                        sh 'npx playwright test'
                     }
                 }
     }
