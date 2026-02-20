@@ -42,7 +42,10 @@ pipeline {
                     }
                     steps {
                         // E2E tests with Playwright
-                        sh 'npx playwright test'
+                        sh '''
+                            npm ci
+                            npx playwright test
+                        '''
                     }
                 }
             }
